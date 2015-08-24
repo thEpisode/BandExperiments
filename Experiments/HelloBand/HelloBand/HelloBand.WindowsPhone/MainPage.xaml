@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="HelloBand.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloBand"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FFF2F3ED">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="AddTileButton" Height="58" VerticalAlignment="Top" Margin="14.667,34,23.125,0" Grid.Column="1" BorderBrush="#FF105B4D" BorderThickness="1" Tapped="AddTileButton_Tapped">
+            <Grid Margin="0,0,0.5,0.333">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="44.167"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" d:LayoutOverrides="Width, TopMargin, BottomMargin, LeftPosition, RightPosition, TopPosition, BottomPosition" Margin="4,0,0.167,0">
+                    <Grid>
+                        <Grid x:Name="backgroundGrid" Width="46" Height="46" Visibility="Visible">
+                            <Ellipse Fill="#FF105B4D" x:Name="Fill" Visibility="Visible" />
+                        </Grid>
+                        <Path Data="M19.833,0L32.5,0 32.5,19.833999 52.334,19.833999 52.334,32.500999 32.5,32.500999 32.5,52.333 19.833,52.333 19.833,32.500999 0,32.500999 0,19.833999 19.833,19.833999z" Stretch="Uniform" Fill="#FFF2F3ED" Width="20" Height="20" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <RotateTransform Angle="0" />
+                                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Grid>
+                </Viewbox>
+                <Grid Grid.Column="1" Margin="0.833,0,-0.333,0" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="160"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Agregar Tile" Foreground="#FF105B4D" d:LayoutOverrides="Width, LeftPosition, RightPosition, TopPosition, BottomPosition" FontSize="29.333" Margin="0" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="0,280,0,-36" Grid.ColumnSpan="3" d:LayoutOverrides="TopPosition, BottomPosition" Opacity="0.2">
+            <Grid>
+                <Grid Name="backgroundGrid2" Width="256" Height="256" Visibility="Collapsed" />
+                <Path Data="M142.386962291872,26.3739025949399L142.918029186403,26.3739025949399 142.652404186403,26.3804600595395z M0,0L96.2571557733172,0C96.2571557733172,1.03939237305894E-06 98.3901742669696,33.23882988681 108.789756176149,37.4590866922299 119.18639313904,41.679690635101 131.453414318239,50.6406357644955 132.252959606325,36.9281990884701 133.052459118044,23.215766227142 134.917037365114,7.90997484912077 134.917037365114,7.9099734186093L137.318480846559,27.9616806863705C137.318480846559,27.9616806863705,138.723891613161,26.5661709665219,142.195876476442,26.3917324899594L142.652404186403,26.3804600595395 143.108626720583,26.3917324899594C146.578536388552,26.5661709665219,147.986464855348,27.9616806863705,147.986464855348,27.9616806863705L150.382140514528,7.9099734186093C150.382140514528,7.90997484912077 152.249633190309,23.215766227142 153.05203187195,36.9281990884701 153.851577160036,50.6406357644955 166.11860596863,41.679690635101 176.51524293152,37.4590866922299 186.917678234255,33.23882988681 189.047835704958,1.03939237305894E-06 189.047835704958,0L285.304992077028,0C285.304992077028,1.03939237305894E-06 227.179503795778,34.8151085733334 241.83930909363,111.321414267913 241.83930909363,111.321414267913 155.984588024294,85.4668991922299 142.652495739138,191.500010764496 129.320403453981,85.4668991922299 43.4627794000262,111.321414267913 43.4627794000262,111.321414267913 58.1254838677996,34.8151085733334 0,1.03939237305894E-06 0,0z" Stretch="Uniform" Fill="#FF105B4D" Width="256" Height="256" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <TransformGroup.Children>
+                                <RotateTransform Angle="0" />
+                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                            </TransformGroup.Children>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Grid>
+        </Viewbox>
+        <TextBlock x:Name="resultText" Grid.Column="1" HorizontalAlignment="Center" Margin="0,134,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="#FF105B4D" FontSize="18.667" Height="77" Width="250" TextAlignment="Center"/>
+    </Grid>
+</Page>
