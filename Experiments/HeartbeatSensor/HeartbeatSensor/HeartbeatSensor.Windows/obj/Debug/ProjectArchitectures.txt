@@ -1,0 +1,1 @@
+C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\HeartbeatSensor.Windows.csproj;neutral

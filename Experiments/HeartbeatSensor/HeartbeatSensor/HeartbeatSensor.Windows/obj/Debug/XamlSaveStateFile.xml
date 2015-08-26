@@ -1,0 +1,8 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\camilo\thepisode git\bandexperiments\experiments\heartbeatsensor\heartbeatsensor\heartbeatsensor.windows\obj\debug\intermediatexaml\heartbeatsensor.windows.exe" HashGuid="5c5990c7-3204-6371-f12d-1c27ae7691c3" />
+    <ReferenceAssembly PathName="c:\users\camilo\thepisode git\bandexperiments\experiments\heartbeatsensor\packages\microsoft.band.1.3.10702\lib\netcore451\microsoft.band.dll" HashGuid="7cf4a639-4314-86c4-544f-32d89a453a74" />
+    <ReferenceAssembly PathName="c:\users\camilo\thepisode git\bandexperiments\experiments\heartbeatsensor\packages\microsoft.band.1.3.10702\lib\netcore451\microsoft.band.store.dll" HashGuid="683806b0-ed23-924f-deb3-d02cb37bf7ff" />
+    <ReferenceAssembly PathName="c:\users\camilo\thepisode git\bandexperiments\experiments\heartbeatsensor\packages\microsoft.band.1.3.10702\lib\netcore451\microsoft.band.windows.dll" HashGuid="7c93d3ed-572d-4b70-5e25-77f006b08ad6" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>CASA-PC</Machine>
+    <WindowsUser>Camilo</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>01c4e6fb-4bcf-44c4-b288-b3db0ec51e3a</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\bin\Debug\HeartbeatSensor.Windows.exe">
+      <PackagePath>HeartbeatSensor.Windows.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\packages\Microsoft.Band.1.3.10702\lib\netcore451\Microsoft.Band.dll">
+      <PackagePath>Microsoft.Band.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\packages\Microsoft.Band.1.3.10702\lib\netcore451\Microsoft.Band.Store.dll">
+      <PackagePath>Microsoft.Band.Store.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\packages\Microsoft.Band.1.3.10702\lib\netcore451\Microsoft.Band.Windows.dll">
+      <PackagePath>Microsoft.Band.Windows.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\bin\Debug\HeartbeatSensor.Windows.xr.xml">
+      <PackagePath>HeartbeatSensor.Windows.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\packages\Microsoft.Band.1.3.10702\lib\netcore451\Microsoft.Band.Store\Microsoft.Band.Store.xr.xml">
+      <PackagePath>Microsoft.Band.Store\Microsoft.Band.Store.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\packages\Microsoft.Band.1.3.10702\lib\netcore451\Microsoft.Band.Store\Sensors\SensorConsentPage.xbf">
+      <PackagePath>Microsoft.Band.Store\Sensors\SensorConsentPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\packages\Microsoft.Band.1.3.10702\lib\netcore451\Microsoft.Band.Store\Tiles\AddTilePage.xbf">
+      <PackagePath>Microsoft.Band.Store\Tiles\AddTilePage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\packages\Microsoft.Band.1.3.10702\lib\netcore451\Microsoft.Band.Windows\Microsoft.Band.Windows.xr.xml">
+      <PackagePath>Microsoft.Band.Windows\Microsoft.Band.Windows.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\packages\Microsoft.Band.1.3.10702\lib\netcore451\Microsoft.Band.Windows\Sensors\WindowsSensorConsentPage.xbf">
+      <PackagePath>Microsoft.Band.Windows\Sensors\WindowsSensorConsentPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\packages\Microsoft.Band.1.3.10702\lib\netcore451\Microsoft.Band.Windows\Tiles\WindowsAddTilePage.xbf">
+      <PackagePath>Microsoft.Band.Windows\Tiles\WindowsAddTilePage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
