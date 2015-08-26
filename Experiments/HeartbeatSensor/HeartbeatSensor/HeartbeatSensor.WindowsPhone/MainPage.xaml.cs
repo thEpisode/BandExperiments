@@ -17,6 +17,8 @@ using Microsoft.Band.Sensors;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Windows.UI.Core;
+using Windows.UI;
+using Windows.UI.ViewManagement;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -29,11 +31,16 @@ namespace HeartbeatSensor
     public sealed partial class MainPage : Page
     {
 
+        private IBandClient bandClient;
+        private StatusBar statusBar;
+
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            statusBar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
 
             this.Loaded += MainPage_Loaded;
         }
@@ -41,23 +48,28 @@ namespace HeartbeatSensor
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
             HeartAppear.Begin();
+            statusBar.ForegroundColor = Colors.White;
+            statusBar.BackgroundOpacity = 0;
         }
 
 
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.
-        /// This parameter is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        private async Task<bool> HasConsentToUse()
         {
-            // TODO: Prepare page for display here.
-
-            // TODO: If your application contains multiple pages, ensure that you are
-            // handling the hardware Back button by registering for the
-            // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
-            // If you are using the NavigationHelper provided by some templates,
-            // this event is handled for you.
+            if (bandClient != null)
+            {
+                if (bandClient.SensorManager.HeartRate.GetCurrentUserConsent() != UserConsent.Granted)
+                {
+                    // user has not consented, request it
+                    await bandClient.SensorManager.HeartRate.RequestUserConsentAsync();
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            Debug.WriteLine("Failed to trying to connect Band");
+            return false;
         }
 
         private void Connect_Click(object sender, RoutedEventArgs e)
@@ -67,18 +79,36 @@ namespace HeartbeatSensor
         }
 
 
-        private IBandClient bandClient;
 
         public async void StartListening()
         {
+            statusBar.ProgressIndicator.Text = "acquiring data...";
+            await statusBar.ProgressIndicator.ShowAsync();
+
+            await ConnectToBand();
+            if (await HasConsentToUse())
+            {
+                
+                if (bandClient != null)
+                {
+                    var sensor = bandClient.SensorManager.HeartRate;
+                    sensor.ReadingChanged += SensorReadingChanged;
+                    await sensor.StartReadingsAsync();
+                }
+            }
+            else
+            {
+                StartListening();
+            }
+        }
+
+        private async Task ConnectToBand()
+        {
             var pairedBands = await BandClientManager.Instance.GetBandsAsync();
             if (pairedBands.Any())
-            {                
+            {
                 var band = pairedBands.First();
-                bandClient = await BandClientManager.Instance.ConnectAsync(band);
-                var sensor = bandClient.SensorManager.HeartRate;
-                sensor.ReadingChanged += SensorReadingChanged;
-                await sensor.StartReadingsAsync();
+                bandClient = await BandClientManager.Instance.ConnectAsync(band);                
             }
         }
 
@@ -104,10 +134,14 @@ namespace HeartbeatSensor
                     {
                         HeartbeatAnimation.Begin();
                         HeartbeatOutput.Text = e.SensorReading.HeartRate.ToString();
+                        StatusBar.GetForCurrentView().ProgressIndicator.Text = "";
+                        StatusBar.GetForCurrentView().ProgressIndicator.HideAsync();
                     });
-                    
-                    Debug.WriteLine("Sending update, pulserate = {0}", e.SensorReading.HeartRate);
 
+                    
+
+                    
+                    
                 }
             }
             catch (Exception ex)
