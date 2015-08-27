@@ -25,12 +25,9 @@ using Windows.UI.ViewManagement;
 
 namespace HeartbeatSensor
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    
     public sealed partial class MainPage : Page
     {
-
         private IBandClient bandClient;
         private StatusBar statusBar;
 
@@ -52,7 +49,10 @@ namespace HeartbeatSensor
             statusBar.BackgroundOpacity = 0;
         }
 
-
+        /// <summary>
+        /// Cheking if the app has permission to use the sensor
+        /// </summary>
+        /// <returns></returns>
         private async Task<bool> HasConsentToUse()
         {
             if (bandClient != null)
@@ -68,7 +68,7 @@ namespace HeartbeatSensor
                     return true;
                 }
             }
-            Debug.WriteLine("Failed to trying to connect Band");
+            Debug.WriteLine("Fail when trying to connect to Microsoft Band");
             return false;
         }
 
@@ -92,7 +92,9 @@ namespace HeartbeatSensor
                 if (bandClient != null)
                 {
                     var sensor = bandClient.SensorManager.HeartRate;
+                    /// Triggering the sensor when changed
                     sensor.ReadingChanged += SensorReadingChanged;
+                    /// Initiate the reading
                     await sensor.StartReadingsAsync();
                 }
             }
@@ -102,6 +104,10 @@ namespace HeartbeatSensor
             }
         }
 
+        /// <summary>
+        /// Making the connection with Band
+        /// </summary>
+        /// <returns></returns>
         private async Task ConnectToBand()
         {
             var pairedBands = await BandClientManager.Instance.GetBandsAsync();
@@ -125,7 +131,6 @@ namespace HeartbeatSensor
 
         async void SensorReadingChanged(object sender, BandSensorReadingEventArgs<IBandHeartRateReading> e)
         {
-            
             try
             {
                 if (e.SensorReading != null)
@@ -138,11 +143,6 @@ namespace HeartbeatSensor
                         StatusBar.GetForCurrentView().ProgressIndicator.Text = "";
                         StatusBar.GetForCurrentView().ProgressIndicator.HideAsync();
                     });
-
-                    
-
-                    
-                    
                 }
             }
             catch (Exception ex)
