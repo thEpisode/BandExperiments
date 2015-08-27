@@ -134,6 +134,7 @@ namespace HeartbeatSensor
                     {
                         HeartbeatAnimation.Begin();
                         HeartbeatOutput.Text = e.SensorReading.HeartRate.ToString();
+
                         StatusBar.GetForCurrentView().ProgressIndicator.Text = "";
                         StatusBar.GetForCurrentView().ProgressIndicator.HideAsync();
                     });

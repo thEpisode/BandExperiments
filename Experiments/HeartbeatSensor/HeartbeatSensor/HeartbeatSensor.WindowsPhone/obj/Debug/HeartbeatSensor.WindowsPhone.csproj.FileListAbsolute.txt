@@ -39,3 +39,4 @@ C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\Heartb
 C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.WindowsPhone\obj\Debug\HeartbeatSensor.WindowsPhone.csproj.GenerateResource.Cache
 C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.WindowsPhone\obj\Debug\Microsoft.Band.Phone.pri.xml
 C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.WindowsPhone\obj\Debug\Microsoft.Band.Store.pri.xml
+C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.WindowsPhone\bin\Debug\images\gray.jpg

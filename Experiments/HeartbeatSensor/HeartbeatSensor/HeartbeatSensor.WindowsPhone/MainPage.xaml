@@ -128,10 +128,10 @@
 		</Storyboard>
 	</Page.Resources>
 
-    <Grid Background="#FFFFFEF5">
+    <Grid Background="#FFE8E8E8">
     	<Grid.RowDefinitions>
-    		<RowDefinition Height="166.667"/>
-    		<RowDefinition Height="175"/>
+    		<RowDefinition Height="213"/>
+    		<RowDefinition Height="128.667"/>
     		<RowDefinition/>
     	</Grid.RowDefinitions>
     	<Grid.ColumnDefinitions>
@@ -139,17 +139,17 @@
     		<ColumnDefinition Width="225.167"/>
     		<ColumnDefinition/>
     	</Grid.ColumnDefinitions>
-        <Grid Grid.ColumnSpan="3" Height="187" VerticalAlignment="Top" Background="Black" Margin="0,-102,0,0"/>
+        <Grid Grid.ColumnSpan="3" Height="225" VerticalAlignment="Top" Background="Black" Margin="0,-74,0,0"/>
 
-        <Button x:Name="ConnectButton" Content="Start reading" HorizontalAlignment="Center" Margin="9.584,55.333,10.583,0" VerticalAlignment="Top" Click="Connect_Click" BorderBrush="#FF063765" Foreground="#FF063765" Height="58" Width="205" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="StopButton" Content="Stop reading" HorizontalAlignment="Center" Margin="9.584,55.333,10.583,0" VerticalAlignment="Top" Click="StopButton_Click" Foreground="#FF063765" BorderBrush="#FF063765" Grid.Column="1" Height="58" Width="205" Grid.Row="1" Opacity="0" Visibility="Collapsed"/>
-        <Viewbox x:Name="backgroundGrid" Visibility="Visible" Margin="57.584,23,52.583,44.667" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Opacity="0">
+        <Button x:Name="ConnectButton" Content="Start reading" HorizontalAlignment="Center" Margin="9.584,35,10.583,35.667" VerticalAlignment="Stretch" Click="Connect_Click" BorderBrush="#FF063765" Foreground="#FF063765" Width="205" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="StopButton" Content="Stop reading" HorizontalAlignment="Center" Margin="9.5,35,10.667,35.667" VerticalAlignment="Top" Click="StopButton_Click" Foreground="#FF063765" BorderBrush="#FF063765" Grid.Column="1" Height="58" Width="205" Grid.Row="1" Opacity="0" Visibility="Collapsed"/>
+        <Viewbox x:Name="backgroundGrid" Visibility="Visible" Margin="21.5,31,26.667,0" RenderTransformOrigin="0.5,0.5" Opacity="0" Height="152" VerticalAlignment="Top" Grid.Column="1">
         	<Viewbox.RenderTransform>
         		<CompositeTransform/>
         	</Viewbox.RenderTransform>
-        	<Path Data="M50.5,4.7500001C25.232973,4.75 4.75,25.232973 4.7500001,50.5 4.75,75.767029 25.232973,96.25 50.5,96.25 75.767029,96.25 96.25,75.767029 96.25,50.5 96.25,25.232973 75.767029,4.75 50.5,4.7500001z M50.5,0C78.390381,0 101,22.609621 101,50.5 101,78.390381 78.390381,101 50.5,101 22.609621,101 0,78.390381 0,50.5 0,22.609621 22.609621,0 50.5,0z" Stretch="Fill" Fill="#FFFFC03B" x:Name="Stroke" Visibility="Visible" Height="256" UseLayoutRounding="False" Width="256" StrokeThickness="0" />
+        	<Path Data="M50.6,2.7500001C25.232973,2.75 2.75,25.232973 2.7500001,50.5 2.75,75.767029 22.232973,99.25 50.5,99.25 78.767029,99.25 99.25,75.767029 98.25,50.5 99.25,25.232973 75.767029,1.75 50.9,2.7500001z M50.5,0C78.390381,0 101,22.609621 101,50.5 101,78.390381 78.390381,101 50.5,101 22.609621,101 0,78.390381 0,50.5 0,22.609621 22.609621,0 50.5,0z" Stretch="Fill" Fill="#FFFFC03B" x:Name="Stroke" Visibility="Visible" Height="256" UseLayoutRounding="False" Width="256" StrokeThickness="0" />
         </Viewbox>
-		<Viewbox x:Name="viewbox" Grid.Column="1" Margin="71.584,38,66.583,44.667" >
+		<Viewbox x:Name="viewbox" Grid.Column="1" Margin="43.5,54,47.667,0" Height="129" VerticalAlignment="Top" >
   <Grid>
     <Path Data="M98.3943,0C139.588,3E-06 159.372,18.688 182,46.9911 204.628,18.688 224.372,3E-06 265.586,0 270.745,3E-06 276.209,0.287865 282.08,0.895517 317.728,4.53071 358.983,38.8146 364,104.504L364,126.347C359.348,189.201 314.113,266.729 182,364 49.867,266.729 4.6722,189.201 0,126.347L0,104.504C5.01682,38.8146 46.2514,4.53071 81.92,0.895517 87.7698,0.287865 93.2542,3E-06 98.3943,0z" Stretch="Uniform" Fill="#FFFFC03B" Width="256" Height="256" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
       <Path.RenderTransform>
@@ -162,6 +162,10 @@
     <TextBlock x:Name="HeartbeatOutput" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="77.333" Margin="0,67,0,0" TextAlignment="Center" Foreground="Black"/>
   </Grid>
 </Viewbox>
+		<Viewbox Grid.ColumnSpan="3" Margin="0,114.333,0.167,0" Grid.Row="2" Stretch="UniformToFill">
+			<Image Source="images/gray.jpg" Stretch="Fill" Height="327" Width="712"/>
+
+		</Viewbox>
 
     </Grid>
 </Page>

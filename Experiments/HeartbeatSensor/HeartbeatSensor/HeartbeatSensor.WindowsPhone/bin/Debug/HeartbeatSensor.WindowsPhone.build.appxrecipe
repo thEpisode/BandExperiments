@@ -52,6 +52,9 @@
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.Shared\images\gray.jpg">
+      <PackagePath>images\gray.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\thEpisode Git\BandExperiments\Experiments\HeartbeatSensor\HeartbeatSensor\HeartbeatSensor.WindowsPhone\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
